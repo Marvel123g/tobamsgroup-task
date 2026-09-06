@@ -72,7 +72,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-[#C4C4C44D] p-[20px] sm:p-[64px] flex flex-col gap-[40px]">
+    <section className="bg-[#C4C4C44D] p-[20px] sm:p-[64px] flex flex-col gap-[40px]" data-aos="fade-up">
       <h1 className="text-[#151515] font-bold text-[40px] text-center">
         Testimonials
       </h1>

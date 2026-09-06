@@ -9,7 +9,7 @@ const DevelopmentProgram = () => {
   ];
   return (
     <section className="py-[64px] px-[20px] sm:p-[64px] ">
-      <main className="bg-[#2C0922] p-[20px] sm:p-[40px] rounded-[20px] flex flex-col min-[864px]:flex-row gap-[34px]">
+      <main className="bg-[#2C0922] p-[20px] sm:p-[40px] rounded-[20px] flex flex-col min-[864px]:flex-row gap-[34px]" data-aos='fade-up'>
         <img
           src="/Images/DP.jpg"
           alt="Development Program"

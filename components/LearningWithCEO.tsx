@@ -13,7 +13,7 @@ const LearningWithCEO = () => {
 
   return (
     <section className="bg-[#FFFFFF] px-4 py-8 sm:px-6 lg:px-[40px] xl:px-[64px]">
-      <main className="bg-[#EF4353]/20 rounded-2xl p-5 sm:p-8 lg:p-[40px]">
+      <main className="bg-[#EF4353]/20 rounded-2xl p-5 sm:p-8 lg:p-[40px]" data-aos='fade-up'>
         <span className="text-[#1671D9] text-lg sm:text-xl italic font-semibold">
           Learning With Our CEO:
         </span>
@@ -71,7 +71,7 @@ const LearningWithCEO = () => {
               ))}
             </section>
 
-            <button className="bg-[#571244] text-[#FFFFFF] py-[10.5px] px-[24px] flex items-center gap-[8px] font-semibold text-base sm:text-lg rounded-[4px]">
+            <button className="bg-[#571244] text-[#FFFFFF] py-[10.5px] px-[24px] flex items-center gap-[8px] font-semibold text-base sm:text-lg rounded-[4px] hover:-translate-y-1 duration-300 cursor-pointer">
               Learn More <ArrowUpRight strokeWidth={2} />
             </button>
           </div>

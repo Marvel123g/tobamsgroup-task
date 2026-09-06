@@ -1,5 +1,7 @@
+"use client";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
+import { motion } from "framer-motion";
 
 const ManagementSystem = () => {
   const courses = [
@@ -12,14 +14,31 @@ const ManagementSystem = () => {
   ];
   return (
     <section className="py-[40px]">
-      <main className="bg-[#571244]/10 py-[48px] px-[20px] sm:px-[60px] min-[1400px]:px-[64px] flex flex-col justify-center min-[838px]:flex-row h-full min-[1055px]:max-h-[664px] gap-[40px] min-[1250px]:gap-[80px]">
-        <img
+      <main
+        className="bg-[#571244]/10 py-[48px] px-[20px] sm:px-[60px] min-[1400px]:px-[64px] flex flex-col justify-center min-[838px]:flex-row h-full min-[1055px]:max-h-[664px] gap-[40px] min-[1250px]:gap-[80px]"
+        data-aos="fade-up"
+      >
+        <motion.img
           src="/management.png"
           alt="Management System"
           className="w-full "
+          initial={{ x: -20, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeIn",
+          }}
         />
 
-        <section className="flex flex-col items-start gap-5 w-full max-w-[675px]">
+        <motion.section
+        initial={{ x: 20, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeIn",
+          }}
+          className="flex flex-col items-start gap-5 w-full max-w-[675px]"
+        >
           <h1 className="text-[#571244] text-[25px] sm:text-[30px] min-[1250px]:text-[40px] font-semibold">
             Learning Management System
           </h1>
@@ -53,10 +72,10 @@ const ManagementSystem = () => {
             </section>
           </div>
 
-          <button className="bg-[#571244] text-[#FFFFFF] py-[10.5px] px-[24px] flex items-center gap-[8px] font-semibold text-lg mt-4">
+          <button className="bg-[#571244] text-[#FFFFFF] py-[10.5px] px-[24px] flex items-center gap-[8px] font-semibold text-lg mt-4 hover:-translate-y-1 duration-300 cursor-pointer">
             Learn More <ArrowUpRight strokeWidth={2} />
           </button>
-        </section>
+        </motion.section>
       </main>
     </section>
   );

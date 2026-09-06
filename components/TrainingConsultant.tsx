@@ -4,7 +4,7 @@ import React from "react";
 const TrainingConsultant = () => {
   return (
     <section className="bg-[#C4C4C44D]">
-      <section className="bg-[#5712441A] py-[64px] px-[20px] sm:px-[48px]">
+      <section className="bg-[#5712441A] py-[64px] px-[20px] sm:px-[48px]" data-aos='fade-up'>
         <header>
           <h1 className="text-[#571244] font-semibold text-[25px] sm:text-[40px]">
             Training The Consultant
@@ -43,12 +43,12 @@ const TrainingConsultant = () => {
           />
         </main>
 
-        <button className="bg-[#571244] text-[#FFFFFF] py-[10.5px] px-[24px] flex items-center gap-[8px] font-semibold text-lg rounded-[4px] mt-[60px]">
+        <button className="bg-[#571244] text-[#FFFFFF] py-[10.5px] px-[24px] flex items-center gap-[8px] font-semibold text-lg rounded-[4px] mt-[60px] hover:-translate-y-1 duration-300 cursor-pointer">
           Learn More <ArrowUpRight strokeWidth={2} />
         </button>
       </section>
 
-      <div className="py-[60px] px-[30px]">
+      <div className="py-[60px] px-[30px]" data-aos="fade-up">
         <section className="max-w-[1134px] mx-auto bg-[#571244] py-[32px] px-[20px] sm:px-[64px] rounded-lg flex flex-col items-center gap-[32px] text-center">
           <p className="text-[#FFFFFF] text-base lg:text-xl font-semibold">
             Want to accelerate professional growth and development at your
@@ -56,7 +56,7 @@ const TrainingConsultant = () => {
             <br className="max-[791px]:hidden block"/>
             See how we can help.
           </p>
-          <button className="bg-[#FFFFFF] border border-[#571244] py-[12px] px-[24px] text-[#571244] font-semibold text-sm lg:text-lg rounded-[4px]">
+          <button className="bg-[#FFFFFF] border border-[#571244] py-[12px] px-[24px] text-[#571244] font-semibold text-sm lg:text-lg rounded-[4px] hover:-translate-y-1 duration-300 cursor-pointer">
             Book a Consultation
           </button>
         </section>

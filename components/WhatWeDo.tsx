@@ -1,8 +1,15 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const WhatWeDo = () => {
   return (
-    <section className="relative">
+    <motion.section
+      initial={{ y: 30, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7, ease: "linear" }}
+      className="relative max-[861px]:mt-10"
+    >
       <img
         src="/Hero.jpg"
         alt="Training and Development"
@@ -13,15 +20,23 @@ const WhatWeDo = () => {
         <p className="bg-white/10 rounded-full px-[48px] py-[12px]  font-semibold text-sm">
           WHAT WE DO
         </p>
-        <h1 className=" font-bold text-[24px] min-[440px]:text-[35px] min-[702px]:text-[56px] mt-2">Training and Development</h1>
+        <h1 className=" font-bold text-[24px] min-[440px]:text-[35px] min-[702px]:text-[56px] mt-2">
+          Training and Development
+        </h1>
         <p className="font-semibold text-[13px] min-[440px]:text-sm min-[702px]:text-lg max-w-[1077px] text-center mt-[15px]">
           Our comprehensive range of programs and resources is designed to
           enhance skills, broaden knowledge, and propel careers forward in
           today's ever-evolving landscape.
         </p>
-        <button className="bg-[#571244] py-[12px] px-[24px] text-[#FFFFFF] font-semibold mt-10">Book a Consultation</button>
+        <motion.button
+          whileHover={{ scale: 1.08 }}
+          transition={{ type: "spring", stiffness: 150 }}
+          className="bg-[#571244] py-[12px] px-[24px] cursor-pointer text-[#FFFFFF] font-semibold mt-10"
+        >
+          Book a Consultation
+        </motion.button>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

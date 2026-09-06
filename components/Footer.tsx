@@ -6,7 +6,7 @@ const Footer = () => {
   
   return (
     <footer>
-      <section className="px-[20px] xl:px-[64px] py-[40px] flex flex-col min-[1000px]:flex-row justify-between items-start gap-[24px] min-[1000px]:items-center bg-[#1D0617] border-b-2 border-b-[#C4C4C4] ">
+      <section className="px-[20px] xl:px-[64px] py-[40px] flex flex-col min-[1000px]:flex-row justify-between items-start gap-[24px] min-[1000px]:items-center bg-[#1D0617] border-b-2 border-b-[#C4C4C4] " data-aos="zoom-in">
         <div className="space-y-3">
           <p className="text-[#FFFFFF] text-sm sm:text-lg font-normal">
             Ready to be a part of something extraordinary?
@@ -20,7 +20,7 @@ const Footer = () => {
         </button>
       </section>
 
-      <section className="bg-[#11040E] py-[32px] px-[20px] xl:px-[64px]">
+      <section className="bg-[#11040E] py-[32px] px-[20px] xl:px-[64px]" data-aos="zoom-in">
         <div className="py-[20px] flex flex-col min-[1000px]:flex-row justify-between gap-[30px] min-[1000px]:gap-[20px]">
           <section className="max-w-[356px] -mt-8">
             <img src="/logo.png" alt="" className="w-[188px] h-fit" />
@@ -131,7 +131,7 @@ const Footer = () => {
 
         <hr className="bg-[#DDD0DA] h-px my-[32px]" />
 
-        <section className="flex gap-4 flex-col-reverse min-[1000px]:flex-row min-[1000px]:justify-between items-center">
+        <section className="flex gap-4 text-center flex-col-reverse min-[1000px]:flex-row min-[1000px]:justify-between items-center">
           <p className="text-[#FFFFFF] text-base font-light">Copyright &copy; Tobams Group, 2024. All rights reserved.</p>
 
           <ul className="flex flex-wrap justify-center items-center gap-y-[12px] gap-x-[40px] min-[508px]:gap-[40px] text-[#FFFFFF] text-base font-light">
