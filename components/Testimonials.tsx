@@ -1,6 +1,6 @@
 "use client";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface TestimonyType {
   name: string;
@@ -49,44 +49,60 @@ const Testimonials = () => {
     },
   ];
   const [currentCard, setCurrentCard] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(1);
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      setVisibleCards(window.matchMedia("(min-width: 740px)").matches ? 3 : 1);
+    };
+
+    updateVisibleCards();
+    window.addEventListener("resize", updateVisibleCards);
+
+    return () => window.removeEventListener("resize", updateVisibleCards);
+  }, []);
+
+  const lastCard = Math.max(testimonies.length - visibleCards, 0);
 
   const handleNext = () => {
-    setCurrentCard((prev) => (prev >= testimonies.length - 3 ? prev : prev + 1));
+    setCurrentCard((prev) => (prev >= lastCard ? prev : prev + 1));
   };
   const handlePrev = () => {
-    setCurrentCard((prev) => (prev <= testimonies.length ? prev - 1 : 0));
+    setCurrentCard((prev) => (prev <= 0 ? 0 : prev - 1));
   };
 
   return (
-    <section className="bg-[#C4C4C44D] p-[64px] flex flex-col gap-[40px]">
+    <section className="bg-[#C4C4C44D] p-[20px] sm:p-[64px] flex flex-col gap-[40px]">
       <h1 className="text-[#151515] font-bold text-[40px] text-center">
         Testimonials
       </h1>
 
       <main className="max-w-[1440px] overflow-hidden flex items-center gap-[31px] w-full">
-        {testimonies.slice(currentCard, currentCard + 3).map((t, index) => (
-          <div
-            className="rounded-[16px] py-[20px] px-[24px] shrink-0 flex flex-col gap-[24px] border-l-2 border-l-[#EF4353] bg-[#FFFFFF] w-full max-w-[422px] h-fit max-h-[244px]"
-            key={index}
-          >
-            <header className="flex items-center gap-[21px]">
-              <img
-                src={t.imgSrc}
-                alt={t.name}
-                className="w-[44px] h-[44px] rounded-full"
-              />
-              <p className="flex flex-col">
-                <span className="font-semibold text-base text-[#151515]">
-                  {t.name}
-                </span>
-                <span className="text-[#696969] text-sm font-normal">
-                  {t.role}
-                </span>
-              </p>
-            </header>
-            <p className="text-[#151515] font-normal text-base">{t.desc}</p>
-          </div>
-        ))}
+        <div className="flex gap-[31px] w-full justify-center">
+          {testimonies.slice(currentCard, currentCard + visibleCards).map((t) => (
+            <div
+              className="rounded-[16px] py-[20px] px-[24px] flex-1 flex flex-col gap-[24px] border-l-2 border-l-[#EF4353] bg-[#FFFFFF] w-full max-w-[422px] h-auto min-h-[200px]"
+              key={t.name}
+            >
+              <header className="flex items-center gap-[21px]">
+                <img
+                  src={t.imgSrc}
+                  alt={t.name}
+                  className="w-[44px] h-[44px] rounded-full"
+                />
+                <p className="flex flex-col">
+                  <span className="font-semibold text-base text-[#151515]">
+                    {t.name}
+                  </span>
+                  <span className="text-[#696969] text-sm font-normal">
+                    {t.role}
+                  </span>
+                </p>
+              </header>
+              <p className="text-[#151515] font-normal text-base">{t.desc}</p>
+            </div>
+          ))}
+        </div>
       </main>
 
       <footer className="flex justify-end gap-[12px] items-center">
@@ -99,9 +115,9 @@ const Testimonials = () => {
           <ChevronLeft />
         </button>
         <button
-          className={`bg-[#F043541A] text-[#EF4353] flex items-center justify-center w-[32px] h-[32px] rounded-lg ${currentCard === testimonies.length -3 ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+          className={`bg-[#F043541A] text-[#EF4353] flex items-center justify-center w-[32px] h-[32px] rounded-lg ${currentCard === lastCard ? "cursor-not-allowed" : "cursor-pointer"}`}
           onClick={handleNext}
-          disabled={currentCard === testimonies.length -3}
+          disabled={currentCard === lastCard}
           aria-label="Next testimony"
         >
           <ChevronRight />

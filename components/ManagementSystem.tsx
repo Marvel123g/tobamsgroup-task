@@ -12,19 +12,19 @@ const ManagementSystem = () => {
   ];
   return (
     <section className="py-[40px]">
-      <main className="bg-[#571244]/10 py-[48px] px-[64px] flex h-full max-h-[664px] gap-[80px]">
+      <main className="bg-[#571244]/10 py-[48px] px-[20px] sm:px-[60px] min-[1400px]:px-[64px] flex flex-col justify-center min-[838px]:flex-row h-full min-[1055px]:max-h-[664px] gap-[40px] min-[1250px]:gap-[80px]">
         <img
           src="/management.png"
           alt="Management System"
-          className="w-full"
+          className="w-full "
         />
 
-        <section className="flex flex-col items-start gap-5 max-w-[675px]">
-          <h1 className="text-[#571244] text-[40px] font-semibold">
+        <section className="flex flex-col items-start gap-5 w-full max-w-[675px]">
+          <h1 className="text-[#571244] text-[25px] sm:text-[30px] min-[1250px]:text-[40px] font-semibold">
             Learning Management System
           </h1>
           <div className="bg-[#571244]/10 p-[24px] rounded-[8px] flex flex-col gap-[20px]">
-            <p className="text-[#151515] text-lg font-normal">
+            <p className="text-[#151515] text-base sm:text-lg font-normal">
               TG Academy is a hub of knowledge and skill-building resources
               designed to empower tech talents on their learning journey. From
               technical courses covering the latest programming languages and
@@ -40,11 +40,11 @@ const ManagementSystem = () => {
               <h3 className="text-[#571244] font-bold text-lg">
                 Some of our courses include:{" "}
               </h3>
-              <ul className="grid grid-cols-3 max-w-[627px] gap-[8px] px-5 mt-2">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 min-[954px]:grid-cols-3 gap-[8px] px-3 mt-2">
                 {courses.map((c, index) => (
                   <li
                     key={index}
-                    className="list-disc text-[#151515] text-base font-normal"
+                    className="list-disc text-[#151515] text-sm min-[1400px]:text-base font-normal"
                   >
                     {c.course}
                   </li>
