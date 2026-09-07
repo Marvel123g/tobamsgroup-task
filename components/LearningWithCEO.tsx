@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 const LearningWithCEO = () => {
@@ -12,17 +13,17 @@ const LearningWithCEO = () => {
   ];
 
   return (
-    <section className="bg-[#FFFFFF] px-4 py-8 sm:px-6 lg:px-[40px] xl:px-[64px]">
-      <main className="bg-[#EF4353]/20 rounded-2xl p-5 sm:p-8 lg:p-[40px]" data-aos='fade-up'>
-        <span className="text-[#1671D9] text-lg sm:text-xl italic font-semibold">
+    <section className="bg-[#FFFFFF] px-4 py-8 sm:px-6 lg:px-[40px] xl:px-[64px]" data-aos='fade-up'>
+      <main className="bg-[#EF4353]/20 rounded-2xl p-5 sm:p-8 lg:p-[40px]" >
+        <span className="text-[#1671D9] text-lg sm:text-xl italic font-nunito font-semibold">
           Learning With Our CEO:
         </span>
 
-        <h1 className="text-[#571244] italic text-[24px] sm:text-[28px] lg:text-[32px] font-semibold mt-2 leading-tight">
+        <h1 className="text-[#571244] italic text-[24px] sm:text-[28px] lg:text-[32px] font-nunito font-semibold mt-2 leading-tight">
           Transformation Hub With Jite Newton
         </h1>
 
-        <p className="text-[#151515] text-sm sm:text-base lg:text-lg font-normal mt-4 leading-relaxed">
+        <p className="text-[#151515] text-sm sm:text-base lg:text-lg font-nunito-sans font-normal mt-4 leading-relaxed">
           Transformation Hub with Jite Newton is a flagship webinar series
           curated by the CEO, Dr. Jite Newton. Designed to elevate career
           trajectories and leadership capabilities, this exclusive event offers
@@ -34,9 +35,11 @@ const LearningWithCEO = () => {
         </p>
 
         <section className="mt-9 flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-[32px]">
-          <img
+          <Image
             src="/Images/Transformation.jpg"
             alt="Transformation Hub With Jite"
+            width={560}
+            height={340}
             className="w-full max-w-[560px] h-auto rounded-lg object-cover mx-auto lg:max-h-[340px]"
           />
 
@@ -64,7 +67,7 @@ const LearningWithCEO = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="text-sm sm:text-base lg:text-[18px] font-normal text-[#151515] leading-snug">
+                  <span className="text-sm sm:text-base lg:text-[18px] font-nunito-sans font-normal text-[#151515] leading-snug">
                     {transform}
                   </span>
                 </p>

@@ -6,13 +6,13 @@ const TrainingConsultant = () => {
     <section className="bg-[#C4C4C44D]">
       <section className="bg-[#5712441A] py-[64px] px-[20px] sm:px-[48px]" data-aos='fade-up'>
         <header>
-          <h1 className="text-[#571244] font-semibold text-[25px] sm:text-[40px]">
+          <h1 className="text-[#571244] font-nunito font-semibold text-[25px] sm:text-[40px]">
             Training The Consultant
           </h1>
-          <small className="text-[#571244] font-semibold text-base sm:text-lg mt-1">
+          <small className="text-[#571244] font-nunito-sans font-semibold text-base sm:text-lg mt-1">
             Maximise Your Potential as a Certified Trainer:
           </small>
-          <p className="text-[#151515] font-normal text-base sm:text-lg mt-3.5">
+          <p className="text-[#151515] font-nunito-sans font-normal text-base sm:text-lg mt-3.5">
             With the help of our Training Consultants program, take a
             revolutionary step toward becoming a distinguished certified
             training consultant. Learn from professionals in the field, immerse
@@ -43,20 +43,20 @@ const TrainingConsultant = () => {
           />
         </main>
 
-        <button className="bg-[#571244] text-[#FFFFFF] py-[10.5px] px-[24px] flex items-center gap-[8px] font-semibold text-lg rounded-[4px] mt-[60px] hover:-translate-y-1 duration-300 cursor-pointer">
+        <button className="bg-[#571244] text-[#FFFFFF] py-[10.5px] px-[24px] font-nunito-sans flex items-center gap-[8px] font-semibold text-lg rounded-[4px] mt-[60px] hover:-translate-y-1 duration-300 cursor-pointer">
           Learn More <ArrowUpRight strokeWidth={2} />
         </button>
       </section>
 
       <div className="py-[60px] px-[30px]" data-aos="fade-up">
         <section className="max-w-[1134px] mx-auto bg-[#571244] py-[32px] px-[20px] sm:px-[64px] rounded-lg flex flex-col items-center gap-[32px] text-center">
-          <p className="text-[#FFFFFF] text-base lg:text-xl font-semibold">
+          <p className="text-[#FFFFFF] font-nunito text-base lg:text-xl font-semibold">
             Want to accelerate professional growth and development at your
             organisation?{" "}
             <br className="max-[791px]:hidden block"/>
             See how we can help.
           </p>
-          <button className="bg-[#FFFFFF] border border-[#571244] py-[12px] px-[24px] text-[#571244] font-semibold text-sm lg:text-lg rounded-[4px] hover:-translate-y-1 duration-300 cursor-pointer">
+          <button className="bg-[#FFFFFF] border border-[#571244] font-nunito py-[12px] px-[24px] text-[#571244] font-semibold text-sm lg:text-lg rounded-[4px] hover:-translate-y-1 duration-300 cursor-pointer">
             Book a Consultation
           </button>
         </section>
@@ -69,7 +69,7 @@ export default TrainingConsultant;
 
 function TextCard({ title, desc }: { title: string; desc: string }) {
   return (
-    <section className="flex flex-col gap-[5px] sm:gap-[12px]">
+    <section className="flex flex-col font-nunito-sans gap-[5px] sm:gap-[12px]">
       <h1 className="text-[#FFFFFF] font-bold text-lg">{title}</h1>
       <p className="text-[#FFFFFF] font-normal text-base sm:text-lg">{desc}</p>
     </section>

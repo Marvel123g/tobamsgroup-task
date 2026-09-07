@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const CorporateTraining = () => {
   return (
@@ -30,34 +31,46 @@ const CorporateTraining = () => {
           />
         </motion.div>
 
-        <motion.img
+        <motion.div
           initial={{ x: 20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
             duration: 0.8,
             ease: "easeIn",
           }}
-          src="/Images/TR1.jpg"
-          alt="Corporate Trainings "
-          className="w-full h-fit max-w-[602px] rounded-tl-[56px] rounded-tr-[24px] rounded-br-[23px] rounded-bl-[12px]"
-        />
+          className="w-full max-w-[602px]"
+        >
+          <Image
+            src="/Images/TR1.jpg"
+            alt="Corporate Trainings"
+            width={602}
+            height={400}
+            className="w-full h-auto rounded-tl-[56px] rounded-tr-[24px] rounded-br-[23px] rounded-bl-[12px]"
+          />
+        </motion.div>
       </section>
 
       <section
         className="flex flex-col-reverse min-[986px]:flex-row gap-[24px] min-[986px]:gap-[64px]"
         data-aos="fade-up"
       >
-        <motion.img
+        <motion.div
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
             duration: 0.8,
             ease: "easeIn",
           }}
-          src="/Images/TR2.jpg"
-          alt="Personalised Individual Training"
-          className=" w-full h-[346px] max-w-[602px] h-fit rounded-tl-[33px] rounded-tr-[8px] rounded-br-[8px] rounded-bl-[8px]"
-        />
+          className="w-full max-w-[602px]"
+        >
+          <Image
+            src="/Images/TR2.jpg"
+            alt="Personalised Individual Training"
+            width={602}
+            height={346}
+            className="w-full h-auto rounded-tl-[33px] rounded-tr-[8px] rounded-br-[8px] rounded-bl-[8px]"
+          />
+        </motion.div>
 
         <motion.div
           initial={{ x: 20, opacity: 0 }}
@@ -108,17 +121,23 @@ const CorporateTraining = () => {
           />
         </motion.div>
 
-        <motion.img
+        <motion.div
           initial={{ x: 20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
             duration: 0.8,
             ease: "easeIn",
           }}
-          src="/Images/TR3.jpg"
-          alt="Capacity Development"
-          className=" w-full h-fit max-w-[602px] rounded-tl-[40px] rounded-tr-[8px] rounded-br-[8px] rounded-bl-[8px]"
-        />
+          className="w-full max-w-[602px]"
+        >
+          <Image
+            src="/Images/TR3.jpg"
+            alt="Capacity Development"
+            width={602}
+            height={400}
+            className="w-full h-auto rounded-tl-[40px] rounded-tr-[8px] rounded-br-[8px] rounded-bl-[8px]"
+          />
+        </motion.div>
       </section>
     </section>
   );
@@ -137,14 +156,14 @@ function Card({
 }) {
   return (
     <section className="max-w-[646px] w-full flex flex-col gap-3">
-      <h1 className="text-[#151515] font-semibold text-[30px] xl:text-[35px]">
+      <h1 className="text-[#151515] font-nunito font-semibold text-[30px] xl:text-[35px]">
         {title}
       </h1>
-      <p className="text-[#696969] text-base xl:text-lg font-normal">
+      <p className="text-[#696969] font-nunito-sans text-base xl:text-lg font-normal">
         {description}
       </p>
 
-      <ul className="px-[20px] flex flex-col gap-[10px]">
+      <ul className="px-[20px] font-nunito-sans flex flex-col gap-[10px]">
         {benefit.map((b, i) => (
           <li key={i} className="flex items-center gap-[14px]">
             <svg

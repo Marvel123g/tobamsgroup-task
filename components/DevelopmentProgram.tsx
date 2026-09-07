@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const DevelopmentProgram = () => {
   const programData = [
@@ -8,24 +9,29 @@ const DevelopmentProgram = () => {
     "Sustainable Growth",
   ];
   return (
-    <section className="py-[64px] px-[20px] sm:p-[64px] ">
-      <main className="bg-[#2C0922] p-[20px] sm:p-[40px] rounded-[20px] flex flex-col min-[864px]:flex-row gap-[34px]" data-aos='fade-up'>
-        <img
+    <section className="py-[64px] px-[20px] sm:p-[64px] " data-aos='fade-up'>
+      <main
+        className="bg-[#2C0922] p-[20px] sm:p-[40px] rounded-[20px] flex flex-col min-[864px]:flex-row gap-[34px]"
+   
+      >
+        <Image
           src="/Images/DP.jpg"
           alt="Development Program"
+          width={592}
+          height={420}
           className="rounded-[8px] max-w-[592px] w-full h-auto text-white object-cover"
         />
 
         <section className="flex flex-col gap-[32px] w-full max-w-[592px]">
-          <h1 className="text-[#FFFFFF] font-semibold text-[25px] tsm:ext-[30px] min-[1114px]:text-[40px] leading-none">
+          <h1 className="text-[#FFFFFF] font-nunito font-semibold text-[25px] tsm:ext-[30px] min-[1114px]:text-[40px] leading-none">
             Management Development Program
           </h1>
-          <p className="text-base min-[1114px]:text-lg text-[#FFFFFF] font-normal">
+          <p className="text-base font-nunito-sans min-[1114px]:text-lg text-[#FFFFFF] font-normal">
             Tobams Group offers a comprehensive Management Development Program
             designed to equip corporate organisations with the high -performing
             leaders they need to thrive.
           </p>
-          <p className=" text-base min-[1114px]:text-lg text-[#FFFFFF] font-normal">
+          <p className=" text-base font-nunito-sans min-[1114px]:text-lg text-[#FFFFFF] font-normal">
             Our program includes workshops, seminars, coaching sessions, online
             courses, and experiential learning opportunities designed to improve
             leadership, strategic thinking, communication, and other essential
@@ -50,7 +56,7 @@ const DevelopmentProgram = () => {
                     fill="white"
                   />
                 </svg>
-                <span className="text-[#FFFFFF] text-sm sm:text-base min-[1114px]:text-lg font-semibold">
+                <span className="text-[#FFFFFF] font-nunito-sans text-sm sm:text-base min-[1114px]:text-lg font-semibold">
                   {program}
                 </span>
               </p>

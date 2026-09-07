@@ -5,7 +5,6 @@ import ManagementSystem from "@/components/ManagementSystem";
 import Testimonials from "@/components/Testimonials";
 import TrainingConsultant from "@/components/TrainingConsultant";
 import WhatWeDo from "@/components/WhatWeDo";
-import Image from "next/image";
 
 export default function Home() {
   return (

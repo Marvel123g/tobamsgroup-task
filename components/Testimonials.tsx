@@ -1,5 +1,6 @@
 "use client";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface TestimonyType {
@@ -73,7 +74,7 @@ const Testimonials = () => {
 
   return (
     <section className="bg-[#C4C4C44D] p-[20px] sm:p-[64px] flex flex-col gap-[40px]" data-aos="fade-up">
-      <h1 className="text-[#151515] font-bold text-[40px] text-center">
+      <h1 className="text-[#151515] font-nunito font-bold text-[40px] text-center">
         Testimonials
       </h1>
 
@@ -85,13 +86,15 @@ const Testimonials = () => {
               key={t.name}
             >
               <header className="flex items-center gap-[21px]">
-                <img
+                <Image
                   src={t.imgSrc}
                   alt={t.name}
-                  className="w-[44px] h-[44px] rounded-full"
+                  width={44}
+                  height={44}
+                  className="rounded-full"
                 />
-                <p className="flex flex-col">
-                  <span className="font-semibold text-base text-[#151515]">
+                <p className="flex flex-col font-nunito-sans">
+                  <span className=" font-semibold text-base text-[#151515]">
                     {t.name}
                   </span>
                   <span className="text-[#696969] text-sm font-normal">
@@ -99,7 +102,7 @@ const Testimonials = () => {
                   </span>
                 </p>
               </header>
-              <p className="text-[#151515] font-normal text-base">{t.desc}</p>
+              <p className="text-[#151515] font-normal text-base font-nunito-sans">{t.desc}</p>
             </div>
           ))}
         </div>

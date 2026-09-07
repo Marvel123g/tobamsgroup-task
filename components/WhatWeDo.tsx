@@ -17,13 +17,13 @@ const WhatWeDo = () => {
       />
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)]" />
       <div className="absolute z-10 inset-0 max-w-[1312px] mx-auto flex flex-col text-center justify-center items-center text-[#FFFFFF]">
-        <p className="bg-white/10 rounded-full px-[48px] py-[12px]  font-semibold text-sm">
+        <p className="bg-white/10 rounded-full px-[48px] py-[12px] font-nunito-sans font-semibold text-sm">
           WHAT WE DO
         </p>
-        <h1 className=" font-bold text-[24px] min-[440px]:text-[35px] min-[702px]:text-[56px] mt-2">
+        <h1 className="font-nunito font-bold text-[24px] min-[440px]:text-[35px] min-[702px]:text-[56px] mt-2">
           Training and Development
         </h1>
-        <p className="font-semibold text-[13px] min-[440px]:text-sm min-[702px]:text-lg max-w-[1077px] text-center mt-[15px]">
+        <p className="font-nunito-sans font-semibold text-[13px] min-[440px]:text-sm min-[702px]:text-lg max-w-[1077px] text-center mt-[15px]">
           Our comprehensive range of programs and resources is designed to
           enhance skills, broaden knowledge, and propel careers forward in
           today's ever-evolving landscape.
@@ -31,7 +31,7 @@ const WhatWeDo = () => {
         <motion.button
           whileHover={{ scale: 1.08 }}
           transition={{ type: "spring", stiffness: 150 }}
-          className="bg-[#571244] py-[12px] px-[24px] cursor-pointer text-[#FFFFFF] font-semibold mt-10"
+          className="font-nunito-sans bg-[#571244] py-[12px] px-[24px] cursor-pointer text-[#FFFFFF] font-semibold mt-10"
         >
           Book a Consultation
         </motion.button>
